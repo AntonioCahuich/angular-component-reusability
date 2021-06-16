@@ -1,0 +1,17 @@
+.app-toolbar {
+  height: 65px;
+  border: 1px;
+  padding: 0 1rem;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #bebebe;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+
+  &--fixed {
+    width: 100%;
+    position: fixed;
+    margin: 0;
+  }
+}

@@ -1,0 +1,21 @@
+<div>
+  {{ item.display }}
+  <label>
+    <input
+      type="radio"
+      value="0"
+      [name]="'value' + item.id"
+      (change)="onChange($event)"
+    />
+    No
+  </label>
+  <label>
+    <input
+      type="radio"
+      value="1"
+      [name]="'value' + item.id"
+      (change)="onChange($event)"
+    />
+    Yes
+  </label>
+</div>

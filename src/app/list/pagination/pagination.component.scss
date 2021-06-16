@@ -1,0 +1,18 @@
+.pages {
+  display: flex;
+  gap: 1rem;
+}
+
+.page {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+
+  &.selected {
+    border: 1px solid #bebebe;
+  }
+}
