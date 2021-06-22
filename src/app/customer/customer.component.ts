@@ -1,18 +1,15 @@
-import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import {Item} from "../item";
+import {Component} from '@angular/core';
+import {SelectorComponent} from "../_core/base/SelectorComponent";
 
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.scss']
+  styleUrls: ['./customer.component.scss'],
+  inputs: ["item", "isSelected"],
+  outputs: ["selected", "unselected"]
 })
-export class CustomerComponent {
-  @Input() item!: Item;
-  @Input() isSelected!: boolean;
-  @Output() selected = new EventEmitter<Item>();
-  @Output() unselected = new EventEmitter<Item>();
-
+export class CustomerComponent extends SelectorComponent {
   onChange($event: any) {
-    $event.target.checked ? this.selected.emit(this.item) : this.unselected.emit(this.item)
+    $event.target.checked ? this.select(this.item) : this.unselect(this.item)
   }
 }

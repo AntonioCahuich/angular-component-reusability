@@ -1,13 +1,15 @@
 import {Component} from '@angular/core';
-import {CustomerComponent} from "../customer/customer.component";
+import {SelectorComponent} from "../_core/base/SelectorComponent";
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  styleUrls: ['./user.component.scss'],
+  inputs: ["item", "isSelected"],
+  outputs: ["selected", "unselected"]
 })
-export class UserComponent extends CustomerComponent {
+export class UserComponent extends SelectorComponent {
   onChange($event: any) {
-    $event.target.value == 1 ? this.selected.emit(this.item) : this.unselected.emit(this.item);
+    $event.target.value == 1 ? this.select(this.item) : this.unselect(this.item)
   }
 }

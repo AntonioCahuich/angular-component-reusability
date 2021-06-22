@@ -1,5 +1,5 @@
-<app-toolbar [elevation]="0">
-  <button app-button-primary>
+<app-toolbar [elevation]="12">
+  <button app-button-primary size="large">
     Primary Button
   </button>
   <button app-button-secondary>
@@ -11,10 +11,18 @@
   praesentium, quidem sapiente sequi.</p>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequuntur culpa dicta dolorem dolorum excepturi maxime natus nulla quasi, quibusdam ratione repudiandae, soluta voluptates. Cum
   dicta id modi perspiciatis quia?</p>
-<app-sheet [elevation]="12">
-  Hello
+<app-sheet [elevation]="4">
+  Hola
 </app-sheet>
+
 <div style="padding: 1rem"></div>
 <app-customer-list #list [items]="customers"></app-customer-list>
 
 <pre>{{list.selectedItems | json}}</pre>
+
+<div style="display: flex">
+  <app-widget-wrapper>
+<!--    <app-velocity-widget></app-velocity-widget>-->
+    <app-weather-widget></app-weather-widget>
+  </app-widget-wrapper>
+</div>

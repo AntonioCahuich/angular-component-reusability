@@ -4,11 +4,11 @@
   [currentPage]="currentPage"
 >
   <ng-template #item let-item="item">
-    <app-customer (selected)="selected($event)"
-                  (unselected)="unselected($event)"
-                  [item]="item"
-                  [isSelected]="isItemSelected(item)"
-    ></app-customer>
+    <app-user (selected)="selected($event)"
+              (unselected)="unselected($event)"
+              [item]="item"
+              [isSelected]="isItemSelected(item)"
+    ></app-user>
   </ng-template>
 </app-list>
 
